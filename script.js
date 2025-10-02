@@ -21,3 +21,17 @@ document.addEventListener('click', (e) => {
         navMenu.classList.remove('active');
     }
 });
+// contact
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const firstName = this.querySelector('input[type="text"]').value.trim();
+  const email = this.querySelector('input[type="email"]').value.trim();
+
+  if (!firstName || !email) {
+    alert('⚠ Please fill out required fields.');
+    return;
+  }
+
+  alert('✅ Form submitted successfully! (In a real app, data would be sent to a server.)');
+});
